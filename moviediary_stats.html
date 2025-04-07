@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Diary Statistics</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --light-text: #7f8c8d;
+            --background: #f5f6fa;
+            --card-background: #ffffff;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+        
+        .toc {
+            background-color: var(--card-background);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .toc li {
+            margin: 0.5rem 0;
+        }
+        
+        .toc a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background-color: var(--card-background);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .no-data {
+            color: var(--light-text);
+            font-style: italic;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Diary Statistics</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#actor-stats">Actor Statistics</a></li>
+                <li><a href="#crew-stats">Crew Statistics</a></li>
+                <li><a href="#genre-stats">Genre Statistics</a></li>
+                <li><a href="#financial-stats">Financial Statistics</a></li>
+            </ul>
+        </div>
+        
+        <section id="actor-stats">
+            <h2>Actor Statistics</h2>
+            
+            <h3>Most Frequent Actors</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Actor Name</th>
+                        <th>TMDB ID</th>
+                        <th>Movie Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Eddie Murphy</td>
+                        <td>776</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tom Hardy</td>
+                        <td>2524</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Frank Welker</td>
+                        <td>15831</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ariana Greenblatt</td>
+                        <td>1767250</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>George Clooney</td>
+                        <td>1461</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Alfred Hitchcock</td>
+                        <td>2636</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Nicolas Cage</td>
+                        <td>2963</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Roger Yuan</td>
+                        <td>2974</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>John Malkovich</td>
+                        <td>6949</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Leslie Nielsen</td>
+                        <td>7633</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Most Frequent Actor Pairs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Actor 1</th>
+                        <th>Actor 2</th>
+                        <th>Movies Together</th>
+                        <th>Example Movies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tom Hardy (ID: 2524)</td>
+                        <td>Reid Scott (ID: 81316)</td>
+                        <td>3</td>
+                        <td>Venom, Venom: Let There Be Carnage and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tom Hardy (ID: 2524)</td>
+                        <td>Otis Winston (ID: 1736538)</td>
+                        <td>3</td>
+                        <td>Venom, Venom: Let There Be Carnage and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tom Hardy (ID: 2524)</td>
+                        <td>Peggy Lu (ID: 2141479)</td>
+                        <td>3</td>
+                        <td>Venom, Venom: Let There Be Carnage and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Reid Scott (ID: 81316)</td>
+                        <td>Otis Winston (ID: 1736538)</td>
+                        <td>3</td>
+                        <td>Venom, Venom: Let There Be Carnage and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Reid Scott (ID: 81316)</td>
+                        <td>Peggy Lu (ID: 2141479)</td>
+                        <td>3</td>
+                        <td>Venom, Venom: Let There Be Carnage and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Otis Winston (ID: 1736538)</td>
+                        <td>Peggy Lu (ID: 2141479)</td>
+                        <td>3</td>
+                        <td>Venom, Venom: Let There Be Carnage and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Jim Carrey (ID: 206)</td>
+                        <td>James Marsden (ID: 11006)</td>
+                        <td>2</td>
+                        <td>Sonic the Hedgehog 3, Sonic the Hedgehog</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Jim Carrey (ID: 206)</td>
+                        <td>Tom Butler (ID: 85922)</td>
+                        <td>2</td>
+                        <td>Sonic the Hedgehog 3, Sonic the Hedgehog</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Jim Carrey (ID: 206)</td>
+                        <td>Tika Sumpter (ID: 110742)</td>
+                        <td>2</td>
+                        <td>Sonic the Hedgehog 3, Sonic the Hedgehog</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Jim Carrey (ID: 206)</td>
+                        <td>Adam Pally (ID: 115974)</td>
+                        <td>2</td>
+                        <td>Sonic the Hedgehog 3, Sonic the Hedgehog</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="crew-stats">
+            <h2>Crew Statistics</h2>
+            
+            <h3>Most Frequent Directors</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Director Name</th>
+                        <th>TMDB ID</th>
+                        <th>Movie Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Alfred Hitchcock</td>
+                        <td>2636</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Woody Allen</td>
+                        <td>1243</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Walter Hill</td>
+                        <td>1723</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Jay Roach</td>
+                        <td>6737</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Mel Brooks</td>
+                        <td>14639</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Ralph Bakshi</td>
+                        <td>16384</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>W.S. Van Dyke</td>
+                        <td>32427</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>David Leitch</td>
+                        <td>40684</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Jeff Fowler</td>
+                        <td>93364</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Denis Villeneuve</td>
+                        <td>137427</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Most Frequent Producers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Producer Name</th>
+                        <th>TMDB ID</th>
+                        <th>Movie Count</th>
+                        <th>Common Roles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Avi Arad</td>
+                        <td>7626</td>
+                        <td>5</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jerry Bruckheimer</td>
+                        <td>770</td>
+                        <td>4</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Matt Tolmach</td>
+                        <td>977941</td>
+                        <td>4</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Suzanne Todd</td>
+                        <td>551</td>
+                        <td>3</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Don Simpson</td>
+                        <td>771</td>
+                        <td>3</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Eddie Murphy</td>
+                        <td>776</td>
+                        <td>3</td>
+                        <td>Executive Producer</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Tim Bevan</td>
+                        <td>2236</td>
+                        <td>3</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Eric Fellner</td>
+                        <td>2238</td>
+                        <td>3</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Eric McLeod</td>
+                        <td>2445</td>
+                        <td>3</td>
+                        <td>Producer, Executive Producer</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Tom Hardy</td>
+                        <td>2524</td>
+                        <td>3</td>
+                        <td>Executive Producer, Producer</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Most Frequent Crew Members</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Crew Member</th>
+                        <th>TMDB ID</th>
+                        <th>Movie Count</th>
+                        <th>Common Roles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tom Holkenborg</td>
+                        <td>56827</td>
+                        <td>8</td>
+                        <td>Original Music Composer</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mary Vernieu</td>
+                        <td>5914</td>
+                        <td>6</td>
+                        <td>Casting</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Dan O'Connell</td>
+                        <td>1338372</td>
+                        <td>6</td>
+                        <td>Foley Artist</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Kevin O'Connell</td>
+                        <td>1378171</td>
+                        <td>6</td>
+                        <td>Sound Re-Recording Mixer</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Victoria Thomas</td>
+                        <td>547</td>
+                        <td>5</td>
+                        <td>Casting, Local Casting</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Hans Zimmer</td>
+                        <td>947</td>
+                        <td>5</td>
+                        <td>Original Music Composer, Music Producer</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Jack Gill</td>
+                        <td>6328</td>
+                        <td>5</td>
+                        <td>Stunt Coordinator, Stunts</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Avi Arad</td>
+                        <td>7626</td>
+                        <td>5</td>
+                        <td>Producer</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Alan Oliney</td>
+                        <td>92481</td>
+                        <td>5</td>
+                        <td>Stunts, Stunt Double and 1 more</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>George Watters II</td>
+                        <td>1378168</td>
+                        <td>5</td>
+                        <td>Supervising Sound Editor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="genre-stats">
+            <h2>Genre Statistics</h2>
+            
+            <h3>Most Common Genres</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Genre</th>
+                        <th>TMDB ID</th>
+                        <th>Movie Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Comedy</td>
+                        <td>35</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Action</td>
+                        <td>28</td>
+                        <td>49</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Adventure</td>
+                        <td>12</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Crime</td>
+                        <td>80</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Thriller</td>
+                        <td>53</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Science Fiction</td>
+                        <td>878</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Drama</td>
+                        <td>18</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Mystery</td>
+                        <td>9648</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Fantasy</td>
+                        <td>14</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Animation</td>
+                        <td>16</td>
+                        <td>9</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Most Common Genre Pairings</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Genre 1</th>
+                        <th>Genre 2</th>
+                        <th>Movie Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Action</td>
+                        <td>Thriller</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Adventure</td>
+                        <td>Action</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Action</td>
+                        <td>Comedy</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Comedy</td>
+                        <td>Crime</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Action</td>
+                        <td>Science Fiction</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Adventure</td>
+                        <td>Science Fiction</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Action</td>
+                        <td>Crime</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Thriller</td>
+                        <td>Crime</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Adventure</td>
+                        <td>Comedy</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Comedy</td>
+                        <td>Mystery</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="financial-stats">
+            <h2>Financial Statistics</h2>
+            
+            <h3>Highest Grossing Movies</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Movie Title</th>
+                        <th>Year</th>
+                        <th>Revenue</th>
+                        <th>Budget</th>
+                        <th>Profit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Barbie</td>
+                        <td>2023</td>
+                        <td>$1,445,638,421</td>
+                        <td>$145,000,000</td>
+                        <td>$1,300,638,421</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Venom</td>
+                        <td>2018</td>
+                        <td>$856,085,151</td>
+                        <td>$116,000,000</td>
+                        <td>$740,085,151</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Dune: Part Two</td>
+                        <td>2024</td>
+                        <td>$714,444,358</td>
+                        <td>$190,000,000</td>
+                        <td>$524,444,358</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Godzilla x Kong: The New Empire</td>
+                        <td>2024</td>
+                        <td>$571,750,016</td>
+                        <td>$150,000,000</td>
+                        <td>$421,750,016</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kung Fu Panda 4</td>
+                        <td>2024</td>
+                        <td>$548,040,835</td>
+                        <td>$80,000,000</td>
+                        <td>$468,040,835</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Venom: Let There Be Carnage</td>
+                        <td>2021</td>
+                        <td>$506,863,592</td>
+                        <td>$110,000,000</td>
+                        <td>$396,863,592</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Sonic the Hedgehog 3</td>
+                        <td>2024</td>
+                        <td>$486,018,457</td>
+                        <td>$122,000,000</td>
+                        <td>$364,018,457</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Venom: The Last Dance</td>
+                        <td>2024</td>
+                        <td>$478,103,649</td>
+                        <td>$120,000,000</td>
+                        <td>$358,103,649</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>The Matrix</td>
+                        <td>1999</td>
+                        <td>$463,517,383</td>
+                        <td>$63,000,000</td>
+                        <td>$400,517,383</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Captain America: Brave New World</td>
+                        <td>2025</td>
+                        <td>$409,278,201</td>
+                        <td>$180,000,000</td>
+                        <td>$229,278,201</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Biggest Box Office Losses</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Movie Title</th>
+                        <th>Year</th>
+                        <th>Loss</th>
+                        <th>Budget</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Borderlands</td>
+                        <td>2024</td>
+                        <td>$82,021,490</td>
+                        <td>$115,000,000</td>
+                        <td>$32,978,510</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Scoob!</td>
+                        <td>2020</td>
+                        <td>$61,400,000</td>
+                        <td>$90,000,000</td>
+                        <td>$28,600,000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kraven the Hunter</td>
+                        <td>2024</td>
+                        <td>$60,815,357</td>
+                        <td>$120,000,000</td>
+                        <td>$59,184,643</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ferrari</td>
+                        <td>2023</td>
+                        <td>$55,779,484</td>
+                        <td>$95,000,000</td>
+                        <td>$39,220,516</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Killers of the Flower Moon</td>
+                        <td>2023</td>
+                        <td>$43,077,656</td>
+                        <td>$200,000,000</td>
+                        <td>$156,922,344</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Dracula: Dead and Loving It</td>
+                        <td>1995</td>
+                        <td>$19,227,856</td>
+                        <td>$30,000,000</td>
+                        <td>$10,772,144</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>DOA: Dead or Alive</td>
+                        <td>2006</td>
+                        <td>$13,400,000</td>
+                        <td>$21,000,000</td>
+                        <td>$7,600,000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Shoot 'Em Up</td>
+                        <td>2007</td>
+                        <td>$12,200,000</td>
+                        <td>$39,000,000</td>
+                        <td>$26,800,000</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>The Avengers</td>
+                        <td>1998</td>
+                        <td>$11,400,000</td>
+                        <td>$60,000,000</td>
+                        <td>$48,600,000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Æon Flux</td>
+                        <td>2005</td>
+                        <td>$8,678,327</td>
+                        <td>$62,000,000</td>
+                        <td>$53,321,673</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Best ROI Movies</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Movie Title</th>
+                        <th>Year</th>
+                        <th>ROI</th>
+                        <th>Budget</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bloodsport</td>
+                        <td>1988</td>
+                        <td>43.33x</td>
+                        <td>$1,500,000</td>
+                        <td>$65,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Beverly Hills Cop</td>
+                        <td>1984</td>
+                        <td>22.60x</td>
+                        <td>$14,000,000</td>
+                        <td>$316,360,478</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ong Bak</td>
+                        <td>2003</td>
+                        <td>18.28x</td>
+                        <td>$1,100,000</td>
+                        <td>$20,112,926</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>The Naked Gun: From the Files of Police Squad!</td>
+                        <td>1988</td>
+                        <td>12.70x</td>
+                        <td>$12,000,000</td>
+                        <td>$152,356,177</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Beverly Hills Cop II</td>
+                        <td>1987</td>
+                        <td>10.71x</td>
+                        <td>$28,000,000</td>
+                        <td>$299,965,036</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>WarGames</td>
+                        <td>1983</td>
+                        <td>10.38x</td>
+                        <td>$12,000,000</td>
+                        <td>$124,600,000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Barbie</td>
+                        <td>2023</td>
+                        <td>9.97x</td>
+                        <td>$145,000,000</td>
+                        <td>$1,445,638,421</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Austin Powers: The Spy Who Shagged Me</td>
+                        <td>1999</td>
+                        <td>9.46x</td>
+                        <td>$33,000,000</td>
+                        <td>$312,016,928</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Hidden Figures</td>
+                        <td>2016</td>
+                        <td>9.44x</td>
+                        <td>$25,000,000</td>
+                        <td>$235,957,472</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Taken</td>
+                        <td>2008</td>
+                        <td>9.07x</td>
+                        <td>$25,000,000</td>
+                        <td>$226,830,568</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Highest Grossing Actors</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Actor Name</th>
+                        <th>TMDB ID</th>
+                        <th>Movie Count</th>
+                        <th>Total Revenue</th>
+                        <th>Average Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mac Brandt</td>
+                        <td>1215837</td>
+                        <td>2</td>
+                        <td>$2,301,723,572</td>
+                        <td>$1,150,861,786</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tom Hardy</td>
+                        <td>2524</td>
+                        <td>4</td>
+                        <td>$2,219,910,732</td>
+                        <td>$554,977,683</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Roger Yuan</td>
+                        <td>2974</td>
+                        <td>3</td>
+                        <td>$1,978,103,137</td>
+                        <td>$659,367,712</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Reid Scott</td>
+                        <td>81316</td>
+                        <td>3</td>
+                        <td>$1,841,052,392</td>
+                        <td>$613,684,131</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Otis Winston</td>
+                        <td>1736538</td>
+                        <td>3</td>
+                        <td>$1,841,052,392</td>
+                        <td>$613,684,131</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Peggy Lu</td>
+                        <td>2141479</td>
+                        <td>3</td>
+                        <td>$1,841,052,392</td>
+                        <td>$613,684,131</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Will Ferrell</td>
+                        <td>23659</td>
+                        <td>3</td>
+                        <td>$1,825,367,097</td>
+                        <td>$608,455,699</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Woody Harrelson</td>
+                        <td>57755</td>
+                        <td>3</td>
+                        <td>$1,674,965,671</td>
+                        <td>$558,321,890</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Ryan Gosling</td>
+                        <td>30614</td>
+                        <td>2</td>
+                        <td>$1,626,711,712</td>
+                        <td>$813,355,856</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>David Mumeni</td>
+                        <td>1619648</td>
+                        <td>2</td>
+                        <td>$1,604,610,991</td>
+                        <td>$802,305,496</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <div class="footer">
+            <p>Generated by Movie Diary Statistics</p>
+        </div>
+    </div>
+</body>
+</html>
