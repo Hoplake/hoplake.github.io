@@ -3,6 +3,7 @@ safe: true
 source: .
 incremental: false
 highlighter: rouge
+markdown: kramdown 
 gist:
   noscript: false
 kramdown:
