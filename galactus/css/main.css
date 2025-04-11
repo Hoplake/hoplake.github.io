@@ -1,0 +1,45 @@
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.jumbotron {
+    background-image: url('../img/galactus_header.jpg');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px #000;
+}
+
+.game {
+    display: none;
+}
+
+.heraldcard {
+    display: none;
+    min-width: 12rem;
+}
+
+.die {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px;  
+    font-size:60px;
+    color: white;
+    background-color: rgb(79, 17, 179);
+    position: relative;
+}
+.guide {
+    font-family: 'Raleway', sans-serif;
+}
+
+.playercard, .enemycard, .timercard, .galactusdie {
+    font-family: 'Raleway', sans-serif;
+    min-width: 12rem;
+}
+
+.card-body {
+    font-family: 'Anton', sans-serif;
+    font-size: 4em;
+}

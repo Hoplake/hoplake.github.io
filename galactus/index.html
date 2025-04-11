@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Anton|Raleway|Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+
+        <title>Galactus is Here!</title>
+    </head>
+    <body>
+        <main role="main">
+            <div class="jumbotron">
+                <div class="container-fluid">
+                    <h1 class="display-3">Galactus has Arrived</h1>
+                    <div class="guide">
+                        <p>Behold: Galactus, devourer of worlds.</p>
+                        <p>The Galactus mode is designed to be a single player, or 2 player co-op campaign.</p>
+                        <p>First, select your own team. This is essentially how you get to choose the difficulty of the game. You can bring you tried and true competitive constructed team, you can choose a team tailor made to deal with Galactus, or you could randomly select a group of characters who are thrown together as Earth’s last hope against the Devourer of Worlds. For your first game, I suggest bringing a team you are familiar with. This can be the typical constructed format with 8 characters and 2 basic actions. Once you get the hang of things you may want to try only bringing 4 characters and 1 basic action for the added challenge.</p>
+                        <p>Galactus has a damage tracker that starts at 0. His countdown timer starts at 10. Choose a character to be his Herald, placing their character card next to Galactus’ play area, and a single die from that card on its level 1 side in Galactus’ Reserve Pool. Galactus wins when either the Countdown timer reaches 0 and Galactus devours Earth or your life is reduced to 0. You win when you have dealt 20 damage to Galactus, forcing him to leave Earth.</p>
+                        <button type="button" class="btn btn-success" id="start">Bring the fight to Galactus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="game">
+                    <div class="row text-center">
+                        <div class="card playercard mx-auto" id="myhealth">
+                            <div class="card-header">
+                                Defenders of Earth
+                            </div>
+                            <div class="card-body" id="defenderscounter">
+                                20
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger hit" data-target="defenders"><i data-feather="minus"></i></button>
+                                <button type="button" class="btn btn-success heal" data-target="defenders"><i data-feather="plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card enemycard mx-auto" id="enemyhealth">
+                            <div class="card-header">
+                                Galactus
+                            </div>
+                            <div class="card-body" id="galactuscounter">
+                                20
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger hit" data-target="galactus"><i data-feather="minus"></i></button>
+                                <button type="button" class="btn btn-success heal" data-target="galactus"><i data-feather="plus"></i></button>
+                            </div>
+
+                        </div>
+                        <div class="card heraldcard mx-auto" id="herald">
+                            <div class="card-header">
+                                Herald
+                            </div>
+                            <div class="card-body" id="heraldlvl">
+                                0
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger" id="killherald"><i data-feather="crosshair"></i></button>
+                            </div>
+
+                        </div>
+                        <div class="card galactusdie mx-auto" id="galactusdie">
+                                <div class="card-header">
+                                    Galactus Die
+                                </div>
+                                <div class="card-body">
+                                    <div class="die" id="die"></div>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-success heal" id="rolldice">Roll</button>
+                                </div>
+    
+                            </div>
+                        <div class="card timercard mx-auto" id="timer">
+                            <div class="card-header">
+                                Timer to Destruction
+                            </div>
+                            <div class="card-body" id="timercounter">
+                                10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="dist/chance.min.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
